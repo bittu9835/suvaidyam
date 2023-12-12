@@ -1,0 +1,124 @@
+{
+ "_liked_by": "[\"Administrator\"]",
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_rename": 1,
+ "autoname": "format:{make}-{model}-{YYYY}-{###}",
+ "creation": "2023-12-10 16:50:22.266987",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "vehicle_preview",
+  "section_break_bqqr",
+  "make",
+  "model",
+  "vehicle_img",
+  "is_published",
+  "route",
+  "column_break_nvhd",
+  "year",
+  "insurance",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "make",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Make",
+   "reqd": 1
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Model",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_nvhd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "insurance",
+   "fieldtype": "Attach",
+   "label": "Insurance"
+  },
+  {
+   "fieldname": "vehicle_img",
+   "fieldtype": "Attach Image",
+   "label": "Vehicle Img"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nOut Of Order\nSold",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is Published"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "route",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vehicle_preview",
+   "fieldtype": "Image",
+   "label": "Vehicle preview",
+   "options": "vehicle_img"
+  },
+  {
+   "fieldname": "section_break_bqqr",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "has_web_view": 1,
+ "image_field": "vehicle_img",
+ "is_published_field": "is_published",
+ "links": [],
+ "modified": "2023-12-12 11:43:50.024672",
+ "modified_by": "Administrator",
+ "module": "suvaidyam",
+ "name": "Vehicle",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "route",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "make",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

@@ -1,0 +1,12 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h1>Shani Swaraj Rides Agency</h1>
+
+<!-- {% set vehicle_list= frappe.get_list("Vehicle",fields=["make","model","year","route"],order_by="make")%} -->
+
+{% for vehicle in vehicle_list %}
+<a href="{{vehicle.route}}">{{vehicle.make}} {{vehicle.model}} {{vehicle.year}}</a>
+{% endfor%}
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{
+ "attach_print": 1,
+ "channel": "Email",
+ "creation": "2023-12-12 14:46:19.201266",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Ride Order",
+ "enabled": 1,
+ "event": "New",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<p>Shani, check this new Booking from {{doc.full_name}}:</p>\n\n<p><a href=\"{{doc.get_url()}}\">Open Booking</a></p>\n",
+ "message_type": "Markdown",
+ "modified": "2023-12-12 14:50:12.712328",
+ "modified_by": "Administrator",
+ "module": "suvaidyam",
+ "name": "New Ride Booking",
+ "owner": "Administrator",
+ "print_format": "",
+ "recipients": [
+  {
+   "receiver_by_role": "Administrator"
+  },
+  {
+   "receiver_by_role": "System Manager"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "subject": "New Booking from "
+}

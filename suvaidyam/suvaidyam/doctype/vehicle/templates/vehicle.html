@@ -1,0 +1,17 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h1>{{ doc.make }} {{ doc.model }}</h1>
+<h2 class="text-muted h3">Year : {{doc.year}}</h2>
+{% if doc.vehicle_img %}
+<img class="w-25 mb-3" src="{{ doc.vehicle_img }}" alt="">
+{% else %}
+<p>Image Not Available.</p>
+{% endif %}
+<br>
+<a href="/ride-booking/new?vehicle={{doc.name}}" class="btn btn-dark ">Book Now</a>
+
+{% endblock %}
+
+
+<!-- this is a sample default web page template -->
