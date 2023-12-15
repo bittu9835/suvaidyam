@@ -1,4 +1,5 @@
 {
+ "_liked_by": "[\"Administrator\"]",
  "actions": [],
  "autoname": "autoincrement",
  "creation": "2023-12-10 17:43:31.762256",
@@ -8,7 +9,8 @@
   "first_name",
   "last_name",
   "column_break_qyjr",
-  "dob"
+  "dob",
+  "full_name"
  ],
  "fields": [
   {
@@ -33,11 +35,16 @@
   {
    "fieldname": "column_break_qyjr",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-11 09:53:34.721199",
+ "modified": "2023-12-15 17:32:05.596018",
  "modified_by": "Administrator",
  "module": "suvaidyam",
  "name": "Driver",
