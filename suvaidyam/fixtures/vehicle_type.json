@@ -1,0 +1,16 @@
+[
+ {
+  "description": "A Two Wheeler Vehicle",
+  "docstatus": 0,
+  "doctype": "Vehicle Type",
+  "modified": "2023-12-16 13:25:49.751106",
+  "name": "Two-Wheeler"
+ },
+ {
+  "description": "A Four Wheeler Vehicle",
+  "docstatus": 0,
+  "doctype": "Vehicle Type",
+  "modified": "2023-12-16 13:39:24.676950",
+  "name": "Four-Wheeler"
+ }
+]

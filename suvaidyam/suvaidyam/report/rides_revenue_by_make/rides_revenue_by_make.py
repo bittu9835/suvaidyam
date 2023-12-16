@@ -16,8 +16,10 @@ def execute(filters=None):
             "fieldname": "revenue",
             "label": "Revenue",
             "fieldtype": "Currency",
-            "width": 100
-        },
+            "width": 100,
+            "currency": "CustomCurrency",
+            "options": "currency:INR",
+        }
     ]
 
     rides = frappe.get_all(
@@ -36,13 +38,14 @@ def execute(filters=None):
 
     chart = get_chart(data)
 
-    return columns, data,None, chart,None
+    return columns, data, None, chart, None
+
 
 def get_chart(data):
-        return {
-            "data": {
-                "labels": [d["make"] for d in data],
-                "datasets": [{"name": "revenue_by_make", "values": [d["revenue"] for d in data]}]
-            },
-            "type": "pie"
-        }
+    return {
+        "data": {
+            "labels": [d["make"] for d in data],
+            "datasets": [{"name": "revenue_by_make", "values": [d["revenue"] for d in data]}]
+        },
+        "type": "pie"
+    }

@@ -10,6 +10,7 @@
  "field_order": [
   "vehicle_preview",
   "section_break_bqqr",
+  "type",
   "make",
   "model",
   "vehicle_img",
@@ -86,13 +87,19 @@
   {
    "fieldname": "section_break_bqqr",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Vehicle Type"
   }
  ],
  "has_web_view": 1,
  "image_field": "vehicle_img",
  "is_published_field": "is_published",
  "links": [],
- "modified": "2023-12-12 11:43:50.024672",
+ "modified": "2023-12-16 13:42:00.583197",
  "modified_by": "Administrator",
  "module": "suvaidyam",
  "name": "Vehicle",
