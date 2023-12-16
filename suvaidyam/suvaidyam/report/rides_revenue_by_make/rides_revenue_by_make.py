@@ -14,9 +14,10 @@ def execute(filters=None):
         },
         {
             'fieldname': 'currency',
-            'label': ('Currency'),
+            'label': 'Currency',
             'fieldtype': 'Link',
-            'options': 'Currency'
+            'options': 'Currency',
+            'hidden':1
         },
         {
             "fieldname": "revenue",
