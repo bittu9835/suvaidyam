@@ -13,12 +13,17 @@ def execute(filters=None):
             "width": 150
         },
         {
+            'fieldname': 'currency',
+            'label': ('Currency'),
+            'fieldtype': 'Link',
+            'options': 'Currency'
+        },
+        {
             "fieldname": "revenue",
             "label": "Revenue",
             "fieldtype": "Currency",
             "width": 100,
-            "currency": "CustomCurrency",
-            "options": "currency:INR",
+            'options': 'currency'
         }
     ]
 
@@ -33,7 +38,7 @@ def execute(filters=None):
         else:
             revenue_by_making[ride.make] = ride.total_amount
 
-    data = [{"make": make, "revenue": revenue}
+    data = [{"make": make, "revenue": revenue,"currency":"INR"}
             for make, revenue in revenue_by_making.items()]
 
     chart = get_chart(data)
