@@ -9,6 +9,11 @@ app_license = "mit"
 # Includes in <head>
 # ------------------
 
+fixtures=[
+    "Vehicle Type"
+]
+
+
 # include js, css files in header of desk.html
 # app_include_css = "/assets/suvaidyam/css/suvaidyam.css"
 # app_include_js = "/assets/suvaidyam/js/suvaidyam.js"
