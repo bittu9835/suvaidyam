@@ -4,28 +4,36 @@
 <h1>Shani Swaraj Rides Agency</h1>
 
 <!-- {% set vehicle_list= frappe.get_list("Vehicle", fields=["make","model","year", "vehicle_img","route"], order_by="make") %} -->
+{% if vehicle_list %}
 
 {% for vehicle in vehicle_list %}
-    <a href="{{ vehicle.route }}">{{ vehicle.make }} {{ vehicle.model }} {{ vehicle.year }}</a>
+<a href="{{ vehicle.route }}">{{ vehicle.make }} {{ vehicle.model }} {{ vehicle.year }}</a>
 {% endfor %}
 
 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         <!-- {% for vehicle in vehicle_list %} -->
-            <div class="carousel-item {% if loop.first %}active{% endif %}">
-                <img src="{{ vehicle.vehicle_img }}" class="d-block w-75" alt="{{ vehicle.make }}">
-            </div>
+        <div class="carousel-item {% if loop.first %}active{% endif %}">
+            <img src="{{ vehicle.vehicle_img }}" class="d-block w-75" alt="{{ vehicle.make }}">
+        </div>
         <!-- {% endfor %} -->
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </button>
 </div>
+{% else %}
+
+<h5 class="text-danger">Data not Avelable</h5>
+
+{% endif %}
 
 
 {% endblock %}
