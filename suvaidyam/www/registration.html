@@ -1,0 +1,48 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+<div class="container pt-5 d-flex flex-column align-items-center">
+    <img style="width: 40px;" src="http://lic.localhost:8000/assets/frappe/images/frappe-framework-logo.svg" alt="">
+    <h5 class="text-center pt-2" style="font-weight: 600;">Register to Frappe</h5>
+    <div class="card p-5 mt-5" style="width: 430px;">
+        <form id="registration-form">
+            <div class="my-5 d-flex flex-column" style="gap: 20px;">
+                <input type="text" class="form-control" id="name" name="name" required placeholder="first name">
+                <input type="email" class="form-control" id="email" name="email" required placeholder="email">
+                <input type="password" class="form-control" id="password" name="password" required placeholder="******">
+            </div>
+            <button type="button" class="btn btn-primary w-100 mt-2" id="registerButton">Register</button>
+            <p class="text-center pt-4">
+                Allready have an account? <a href="/login">Sign in</a>
+            </p>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.getElementById('registerButton').addEventListener('click', function () {
+        var formData = {
+            'doctype': 'User',
+            'first_name': document.getElementById('name').value,
+            'email': document.getElementById('email').value,
+            'new_password': document.getElementById('password').value,
+        };
+
+        frappe.call({
+            method: 'suvaidyam.api.register_user',
+            args: { 'data': JSON.stringify(formData) },
+            callback: function (response) {
+                if (response.message === 'success') {
+                    window.location.href = '/login';
+                } else {
+                    console.log('Registration failed: ' + response.message);
+                }
+            }
+        });
+    });
+
+    // frappe.core.doctype.user.user.sign_up
+</script>
+
+{% endblock %}
